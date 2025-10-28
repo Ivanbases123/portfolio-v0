@@ -1,0 +1,110 @@
+/* Estilos Generales */
+:root {
+    --color-primary: #00bbdc;
+    --blue-light: #4f8bd2;  /* Azul claro */
+    --blue-primary: #065fc1; /* Azul oscuro */
+    --white: #f7f7f7;
+    --gray-light: #f4f4f4;  /* Ajustable si es necesario */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, var(--color-primary), var(--white));
+    color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor de Validación */
+.validation-container {
+    display: block;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+h2 {
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+p {
+    color: var(--blue-primary);
+}
+
+/* Campos de Entrada */
+.input-group {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group .codigo {
+    box-sizing: border-box;
+}
+
+form {
+    display: block;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--gray-light);
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    background-color: var(--white);
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 5px rgba(6, 95, 193, 0.5);
+}
+
+/* Botón de Validación */
+.btn-validate {
+    background-color: var(--color-primary);
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-validate:hover {
+    background-color: #044a8c;
+    transform: scale(1.05);
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

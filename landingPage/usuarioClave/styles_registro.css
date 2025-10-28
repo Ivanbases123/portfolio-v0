@@ -1,0 +1,116 @@
+/* Primero, hago un "reset" de estilos para eliminar márgenes, rellenos y otros estilos predeterminados del navegador. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Aseguro que el padding y el borde no afecten el tamaño total de los elementos. */
+    font-family: Arial, sans-serif; /* Defino una fuente predeterminada para todo el documento. */
+}
+
+/* Configuro el cuerpo de la página. */
+body {
+    display: flex; /* Uso flexbox para centrar el contenido vertical y horizontalmente. */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupo toda la altura de la ventana del navegador. */
+    background-color: #f5f5f5; /* Pongo un color de fondo suave. */
+    padding: 10px; /* Añado un poco de espacio alrededor del contenido. */
+    background-image: url("../img_6.png"); /* Añado una imagen de fondo. */
+    background-size: cover; /* Aseguro que la imagen cubra todo el fondo. */
+    background-repeat: no-repeat; /* Evito que la imagen se repita. */
+    background-position: center; /* Centro la imagen en el fondo. */
+}
+
+/* Estilos para el contenedor principal del formulario de registro. */
+.registro-container {
+    background: #ffffff; /* Fondo blanco para el contenedor. */
+    padding: 2rem; /* Añado espacio interno alrededor del contenido. */
+    border-radius: 12px; /* Redondeo las esquinas del contenedor. */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Añado una sombra suave para dar profundidad. */
+    text-align: center; /* Centro el texto dentro del contenedor. */
+    width: 100%; /* Ocupo el 100% del ancho disponible. */
+    max-width: 400px; /* Limito el ancho máximo del contenedor. */
+}
+
+/* Estilos para el contenedor del logo. */
+.logo-container {
+    text-align: center; /* Centro el logo horizontalmente. */
+    margin-bottom: 15px; /* Añado espacio debajo del logo. */
+}
+
+/* Estilos para la imagen del logo. */
+.logo-container img {
+    width: 100%; /* Ajusto el ancho de la imagen al 100% del contenedor. */
+    height: auto; /* Mantengo la proporción de la imagen. */
+}
+
+/* Estilos para el título del formulario. */
+h2 {
+    font-size: 24px; /* Defino un tamaño de fuente grande para el título. */
+    margin-bottom: 1rem; /* Añado espacio debajo del título. */
+}
+
+/* Estilos para los textos descriptivos. */
+p {
+    font-size: 14px; /* Defino un tamaño de fuente pequeño. */
+    color: #555; /* Pongo un color de texto gris para que no sea tan llamativo. */
+    margin-bottom: 1rem; /* Añado espacio debajo del texto. */
+}
+
+/* Estilos para el mensaje de error cuando el correo ya está registrado. */
+.mensaje-error {
+    color: red; /* Pongo el texto en rojo para que destaque. */
+    font-size: 15px; /* Defino un tamaño de fuente mediano. */
+    font-weight: bold; /* Pongo el texto en negrita. */
+    text-align: center; /* Centro el mensaje de error. */
+    margin-top: 10px; /* Añado espacio arriba del mensaje. */
+}
+
+/* Efecto hover para los enlaces dentro del mensaje de error. */
+.mensaje-error a:hover {
+    text-decoration: underline; /* Añado un subrayado al pasar el mouse. */
+}
+
+/* Estilos para las etiquetas de los campos del formulario. */
+label {
+    display: block; /* Hago que las etiquetas ocupen toda la línea. */
+    text-align: left; /* Alineo el texto de las etiquetas a la izquierda. */
+    font-weight: bold; /* Pongo el texto en negrita. */
+    margin-top: 10px; /* Añado espacio arriba de cada etiqueta. */
+}
+
+/* Estilos para los campos de entrada de texto. */
+input {
+    width: 100%; /* Ocupo el 100% del ancho disponible. */
+    padding: 10px; /* Añado espacio interno dentro de los campos. */
+    margin-top: 5px; /* Añado un pequeño espacio arriba de cada campo. */
+    border: 1px solid #ccc; /* Añado un borde sutil. */
+    border-radius: 6px; /* Redondeo las esquinas de los campos. */
+    font-size: 16px; /* Defino un tamaño de fuente legible. */
+}
+
+/* Estilos para el botón de registro. */
+button {
+    width: 100%; /* Ocupo el 100% del ancho disponible. */
+    padding: 10px; /* Añado espacio interno dentro del botón. */
+    background-color: #3f51b5; /* Pongo un color de fondo azul. */
+    color: white; /* Defino el color del texto como blanco. */
+    border: none; /* Elimino el borde del botón. */
+    border-radius: 6px; /* Redondeo las esquinas del botón. */
+    font-size: 18px; /* Defino un tamaño de fuente grande. */
+    cursor: pointer; /* Cambio el cursor a una mano para indicar que es clickeable. */
+    margin-top: 15px; /* Añado espacio arriba del botón. */
+    transition: 0.3s ease; /* Añado una transición suave para efectos hover. */
+}
+
+/* Efecto hover para el botón. */
+button:hover {
+    background-color: #303f9f; /* Cambio el color de fondo al pasar el mouse. */
+}
+
+/* Estilos responsivos para pantallas más pequeñas (hasta 768px de ancho). */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%; /* Reduzco el ancho del contenedor en pantallas pequeñas. */
+        padding: 1.5rem; /* Reduzco el espacio interno en pantallas pequeñas. */
+    }
+}

@@ -1,0 +1,123 @@
+/* Estilo contenedor principal del detalle */
+.detalle-solicitud {
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: var(--color-card);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Encabezados dentro del detalle */
+  .detalle-solicitud h2 {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 0.3rem;
+  }
+  
+  /* Listas descriptivas */
+  .detalle-solicitud ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .detalle-solicitud li {
+    margin-bottom: 0.5rem;
+    color: var(--color-fg);
+  }
+  
+  .detalle-solicitud strong {
+    color: var(--color-fg-strong);
+  }
+  
+  /* Tabla del historial */
+  .detalle-solicitud table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .detalle-solicitud table th,
+  .detalle-solicitud table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    text-align: left;
+    color: var(--color-fg);
+    background-color: white;
+  }
+  
+  .detalle-solicitud table th {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  
+  /* Formulario de acciones */
+  .detalle-solicitud form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .detalle-solicitud label {
+    font-weight: 600;
+    color: var(--color-fg);
+  }
+  
+  .detalle-solicitud select,
+  .detalle-solicitud textarea {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .detalle-solicitud textarea:focus,
+  .detalle-solicitud select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(0, 187, 220, 0.2);
+  }
+  
+  /* Botón de envío */
+  .btn.btn-new {
+    align-self: flex-end;
+    width: fit-content;
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 50%;
+    margin: auto;
+  }
+  
+  .btn.btn-new:hover {
+    background-color: var(--color-accent-dark);
+  }
+  
+  /* Responsive para móviles */
+  @media (max-width: 768px) {
+    .detalle-solicitud {
+      padding: 1rem;
+      margin: 1rem;
+    }
+  
+    .btn.btn-new {
+      width: 100%;
+      align-self: center;
+    }
+  }
+  

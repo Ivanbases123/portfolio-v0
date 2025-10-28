@@ -1,0 +1,385 @@
+/* =========================== VARIABLES =========================== */
+:root {
+  --color-primary: #00bbdc;
+  --color-background-hero: #292475b6;
+  --color-bg: #f5f7fa;
+  --color-fg: #1e1e1e;
+  --color-accent: #2196f3;
+  --color-accent-dark: #1976d2;
+  --color-yellow: #fbc02d;
+  --color-danger: #e53935;
+  --color-card: #ffffff;
+}
+
+body.dark {
+  --color-bg: #1e1e1e;
+  --color-fg: #f5f7fa;
+  --color-card: #2c2c2c;
+}
+
+/* =========================== BASE =========================== */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+.dashboard {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* =========================== TOPBAR =========================== */
+.topbar {
+  background-color: var(--color-card);
+  padding: 0 1rem;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 900;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.username {
+  font-weight: bold;
+  color: var(--color-fg);
+}
+
+.logout {
+  background: none;
+  border: none;
+  color: var(--color-danger);
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* =========================== SIDEBAR =========================== */
+.sidebar {
+  background-color: var(--color-primary);
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-logo {
+  background-color: var(--color-primary);
+  text-align: center;
+  padding-bottom: 2.5rem;
+}
+
+.sidebar-logo img {
+  width: 80%;
+  max-width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.sidebar nav img{
+  margin-right: 10px;
+}
+
+.sidebar nav a {
+  align-items: center;
+  display: flex;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background-color: var(--color-accent);
+  transform: translateX(10px);
+  color: white;
+}
+
+.sidebar button {
+  margin-top: auto;
+  background: var(--color-yellow);
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* =========================== CONTENIDO =========================== */
+.main-wrapper {
+  margin-left: 220px;
+  width: calc(100% - 220px);
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .main-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.topbar {
+  height: 80px;
+  background: white;
+  text-align: center;
+}
+
+h1 {
+  line-height: 80px;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  background: var(--color-bg);
+  overflow-y: auto;
+  min-height: calc(100vh - 60px);
+}
+
+/* =========================== SECCIONES OCULTABLES =========================== */
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+/* =========================== TABLA =========================== */
+.table-container {
+  background-color: var(--color-card);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+
+table {
+  width: 100%;
+  border-collapse:collapse;
+  min-width: 600px;
+  border: 1px solid #5c5a5a ;
+}
+
+th, td {
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 0.95rem;
+  border: 1px solid #5c5a5a ;
+}
+
+th {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* =========================== BOTONES =========================== */
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-new {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.btn-edit {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-delete {
+  background-color: var(--color-danger);
+  color: white;
+}
+
+.btn-view {
+  background-color: var(--color-accent);
+  color: white;
+  margin-right: 0.25rem;
+}
+
+.action-btns {
+  display: flex;
+  gap: 0.25rem;
+}
+tr:last-child, td:last-child {
+  border-right: none;
+  border-left: none;
+  border-top: none;
+}
+
+.td:last-child {
+  padding-left: 20px;
+}
+
+
+/* =========================== RESPONSIVE =========================== */
+@media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .topbar {
+    justify-content: space-between;
+  }
+
+  .main-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-info {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .sidebar nav a {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  th, td {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    line-height: 60px;
+  }
+}
+/* =========================== BOTONES RESPONSIVOS =========================== */
+.responsive-icon .btn-text {
+  display: inline;
+}
+
+@media (max-width: 600px) {
+  .responsive-icon .btn-text {
+    display: none;
+  }
+}
+
+/* =========================== ESTILOS DEL FILTRO DE DETALLES FINALIZADOS =========================== */
+
+.filter-form {
+  background-color: var(--color-card);
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 1rem auto;
+  max-width: 1200px;
+}
+
+.filter-form label {
+  font-weight: 600;
+  color: var(--color-fg);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.filter-form select,
+.filter-form input[type="date"] {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: white;
+  width: 20%;
+  min-width: 150px;
+  box-sizing: border-box;
+}
+
+.filter-form select:focus,
+.filter-form input[type="date"]:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(0, 187, 220, 0.2);
+}
+
+.filter-form button {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 120px;
+}
+
+.filter-form button:hover {
+  background-color: var(--color-accent-dark);
+}
+
+@media (max-width: 768px) {
+  .filter-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-form label {
+    margin-bottom: 0.5rem;
+  }
+
+  .filter-form select,
+  .filter-form input[type="date"],
+  .filter-form button {
+    width: 20%;
+  }
+}
